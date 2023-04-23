@@ -1,0 +1,10 @@
+{
+  // ===================== Typescript General =====================
+  "export default snippet": {
+    "prefix": "edd",
+    "body": [
+      "export default $TM_FILENAME_BASE;" //
+    ],
+    "description": "Export default file"
+  }
+}

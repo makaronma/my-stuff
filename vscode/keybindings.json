@@ -1,0 +1,42 @@
+[
+  {
+    "key": "cmd+u",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "cmd+k cmd+j",
+    "command": "workbench.action.togglePanel"
+  },
+
+  // ===================== Remove Shortcuts =====================
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+k cmd+l",
+    "command": "-editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "cmd+k cmd+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+  }
+]

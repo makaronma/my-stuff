@@ -1,0 +1,161 @@
+{
+  // ===================== VSCode =====================
+  "update.mode": "start",
+  "redhat.telemetry.enabled": false,
+
+  // ===================== Layout =====================
+  "workbench.colorTheme": "Solarized Light+",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.layoutControl.enabled": false,
+  "editor.minimap.enabled": false,
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+  "editor.guides.bracketPairs": "active",
+  "window.zoomLevel": 2,
+  "highlight.regexes": {
+    "(use\\w+(\\(|<))": {
+      "decorations": [
+        {
+          "backgroundColor": "#f1e7b5",
+          "color": "#0E1318"
+        }
+      ]
+    },
+    "(console.log)": {
+      "decorations": [
+        {
+          "borderWidth": "2px",
+          "borderColor": "#e4bf1b",
+          "borderStyle": "solid"
+        }
+      ]
+    }
+  },
+  "material-icon-theme.files.associations": {
+    "*.go": "go_gopher",
+    "*.md": "../../icons/file_type_markdown"
+  },
+
+  // ===================== Git =====================
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.enabled": false,
+
+  // ===================== File =====================
+  // https://github.com/antfu/vscode-file-nesting-config
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "Cargo.toml": "Cargo.lock",
+    ".env": ".env.*",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+    "next.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, next-env.d.ts, playwright.config.*, postcss.config.*, puppeteer.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
+    "app.json": "eas.json, babel.config.js, .babelrc*, metro.config.js, .svgrrc",
+    ".prettierrc": ".prettierrc, .prettierignore",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": ".node-version, .nodemon*, .npm*, package-lock.json, package.nls*.json, yarn*, pnpm-lock.yaml",
+    "readme*": "authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*",
+    "jest.config.*": "jest*"
+  },
+
+  // ===================== Languages - Javascript & Typescript =====================
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescriptHero.imports.stringQuoteStyle": "\"",
+  "typescriptHero.imports.multiLineWrapThreshold": 300,
+  "xstate.nestTypegenFiles": false,
+
+  // ===================== Languages - Rust =====================
+  "[rust]": {
+    // "editor.defaultFormatter": "rust-lang.rust", // Makes the magic
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer" // Optional
+  },
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.completion.snippets.custom": {
+    "Arc::new": {
+      "postfix": "arc",
+      "body": "Arc::new(${receiver})",
+      "requires": "std::sync::Arc",
+      "description": "Put the expression into an `Arc`",
+      "scope": "expr"
+    },
+    "Rc::new": {
+      "postfix": "rc",
+      "body": "Rc::new(${receiver})",
+      "requires": "std::rc::Rc",
+      "description": "Put the expression into an `Rc`",
+      "scope": "expr"
+    },
+    "Box::pin": {
+      "postfix": "pinbox",
+      "body": "Box::pin(${receiver})",
+      "requires": "std::boxed::Box",
+      "description": "Put the expression into a pinned `Box`",
+      "scope": "expr"
+    },
+    "Ok": {
+      "postfix": "ok",
+      "body": "Ok(${receiver})",
+      "description": "Wrap the expression in a `Result::Ok`",
+      "scope": "expr"
+    },
+    "Err": {
+      "postfix": "err",
+      "body": "Err(${receiver})",
+      "description": "Wrap the expression in a `Result::Err`",
+      "scope": "expr"
+    },
+    "Some": {
+      "postfix": "some",
+      "body": "Some(${receiver})",
+      "description": "Wrap the expression in an `Option::Some`",
+      "scope": "expr"
+    }
+  },
+
+  // ===================== Languages - Go =====================
+  "go.autocompleteUnimportedPackages": true,
+  "go.gocodeAutoBuild": true,
+  "go.lintTool": "revive",
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+
+  // ===================== Languages - Python =====================
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.wordBasedSuggestions": false,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "python.formatting.provider": "none",
+
+  // ===================== Languages - JSON =====================
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ===================== Languages - YAML =====================
+  "yaml.maxItemsComputed": 1000,
+
+  // ===================== Languages - HTML =====================
+  "[html]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.formatOnSave": true
+  }
+
+  // ===================== Other =====================
+}
