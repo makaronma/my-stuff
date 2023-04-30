@@ -1,5 +1,43 @@
-# Config for Vscode
+# Every Stuff
+
+## Daily Read
+
+- [Github Trending Repos (Typescript)](https://github.com/trending/typescript?since=daily)
+
+## Tools
+
+- [Excalidraw](https://github.com/excalidraw/excalidraw) - Virtual whiteboard for sketching hand-drawn like diagrams.
+
+## My Repo / Live Demo
+
+- [babel-plugin-twrnc-extract](https://github.com/makaronma/babel-plugin-twrnc-extract)
+
+- [Package Selector](https://makaronma.github.io/package-selector/)
+
+- [esbuild-ts-starter](https://github.com/makaronma/esbuild-ts-starter)
+
+- [Sorting Algo Visualizer](https://makaronma.github.io/sorting-algo-visualizer/)
+
+- [Clock](https://makaronma.github.io/mkron-clock/)
+
+## Dummy api
+
+- [Json Placeholder](https://jsonplaceholder.typicode.com/)
+
+- [Fake Store api](https://fakestoreapi.com/)
+
+- [Pokemon api](https://pokeapi.co/)
+
+- [Music api](https://musicmachinery.com/music-apis/)
+
+## Learning Platform
+
+- [Medium](https://medium.com/)
+
+- [Frontend Masters](https://frontendmasters.com/)
+
+- [Coursera](https://www.coursera.org/)
 
 ## Reference
 
-<https://github.com/prettier/prettier-vscode/issues/352#issuecomment-428714849>
+- [awwwards] (https://www.awwwards.com/)
