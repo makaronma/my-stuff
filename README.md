@@ -4,10 +4,13 @@
 
 - [Github Trending Repos (Typescript)](https://github.com/trending/typescript?since=daily)
 
+<<<<<<< HEAD
 - [Bytes](https://bytes.dev/archives)
 
 - [reactnewsletter](https://reactnewsletter.com/issues)
 
+=======
+>>>>>>> 16c15b3d920add71a6fa16ede38e00cd65fdb36f
 ## Tools
 
 - [Excalidraw](https://github.com/excalidraw/excalidraw) - Virtual whiteboard for sketching hand-drawn like diagrams.
