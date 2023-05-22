@@ -2,14 +2,17 @@
   // ===================== VSCode =====================
   "update.mode": "start",
   "redhat.telemetry.enabled": false,
-
+  "diffEditor.diffAlgorithm": "advanced",
   // ===================== Layout =====================
   "workbench.colorTheme": "Solarized Light+",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.enabled": false,
+  "workbench.sideBar.location": "right",
+  "workbench.tree.indent": 9, // default 8
   "editor.minimap.enabled": false,
-  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
   "editor.guides.bracketPairs": "active",
+  "window.commandCenter": false,
   "window.zoomLevel": 2,
   "highlight.regexes": {
     "(use\\w+(\\(|<))": {
@@ -66,6 +69,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescriptHero.imports.stringQuoteStyle": "\"",
@@ -155,7 +161,16 @@
     "editor.tabSize": 2,
     "editor.defaultFormatter": "vscode.html-language-features",
     "editor.formatOnSave": true
-  }
-
+  },
   // ===================== Other =====================
+  "sonarlint.rules": {
+    "typescript:S6480": { "level": "off" },
+    "typescript:S125": { "level": "off" },
+    "typescript:S3358": { "level": "off" },
+    "typescript:S6481": { "level": "off" },
+    "typescript:S1854": { "level": "off" },
+    "typescript:S1128": { "level": "off" },
+    "javascript:S125": { "level": "off" },
+    "typescript:S3776": { "level": "off" }
+  }
 }
