@@ -1,14 +1,18 @@
 # Extensions
 
+List all vscode's extensions
+
+```shell
+code --list-extensions
+```
+
 [Install All](#install-all-extensions)
 
 - ambar.bundle-size
 - apollographql.vscode-apollo
 - bierner.markdown-checkbox
 - bradlc.vscode-tailwindcss
-- Braver.vscode-solarized
 - bungcip.better-toml
-- ChakrounAnas.turbo-console-log
 - christian-kohler.path-intellisense
 - codezombiech.gitignore
 - danielpinto8zz6.c-cpp-compile-run
@@ -18,7 +22,6 @@
 - DavidAnson.vscode-markdownlint
 - dbaeumer.vscode-eslint
 - donjayamanne.githistory
-- dsznajder.es7-react-js-snippets
 - eamodio.gitlens
 - emeraldwalk.RunOnSave
 - esbenp.prettier-vscode
@@ -37,6 +40,7 @@
 - mgmcdermott.vscode-language-babel
 - mhutchie.git-graph
 - mongodb.mongodb-vscode
+- ms-azuretools.vscode-docker
 - ms-python.autopep8
 - ms-python.black-formatter
 - ms-python.python
@@ -55,6 +59,7 @@
 - ms-vsliveshare.vsliveshare
 - naumovs.color-highlight
 - nrwl.angular-console
+- Perkovec.emoji
 - PKief.markdown-checkbox
 - PKief.material-icon-theme
 - PulkitGangwar.nextjs-snippets
@@ -88,9 +93,7 @@ code --install-extension ambar.bundle-size
 code --install-extension apollographql.vscode-apollo
 code --install-extension bierner.markdown-checkbox
 code --install-extension bradlc.vscode-tailwindcss
-code --install-extension Braver.vscode-solarized
 code --install-extension bungcip.better-toml
-code --install-extension ChakrounAnas.turbo-console-log
 code --install-extension christian-kohler.path-intellisense
 code --install-extension codezombiech.gitignore
 code --install-extension danielpinto8zz6.c-cpp-compile-run
@@ -100,7 +103,6 @@ code --install-extension Dart-Code.flutter
 code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension donjayamanne.githistory
-code --install-extension dsznajder.es7-react-js-snippets
 code --install-extension eamodio.gitlens
 code --install-extension emeraldwalk.RunOnSave
 code --install-extension esbenp.prettier-vscode
@@ -119,6 +121,7 @@ code --install-extension matangover.mypy
 code --install-extension mgmcdermott.vscode-language-babel
 code --install-extension mhutchie.git-graph
 code --install-extension mongodb.mongodb-vscode
+code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-python.autopep8
 code --install-extension ms-python.black-formatter
 code --install-extension ms-python.python
@@ -137,6 +140,7 @@ code --install-extension ms-vscode.remote-repositories
 code --install-extension ms-vsliveshare.vsliveshare
 code --install-extension naumovs.color-highlight
 code --install-extension nrwl.angular-console
+code --install-extension Perkovec.emoji
 code --install-extension PKief.markdown-checkbox
 code --install-extension PKief.material-icon-theme
 code --install-extension PulkitGangwar.nextjs-snippets
