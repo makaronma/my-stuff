@@ -1,9 +1,9 @@
 {
   // ===================== React General =====================
-	"useEffect log": {
+  "useEffect log": {
     "prefix": "uselog",
     "body": [
-      "useEffect(() => {", //
+      "useEffect(() => {",
       "  console.log($1);",
       "}, [$1]);"
     ],
@@ -22,10 +22,30 @@
     "prefix": "usee",
     "body": [
       "useEffect(() => {",
-      "",
-      "}, []);"
+       "", 
+       "}, []);"
     ],
     "description": "[React] useEffect"
+  },
+
+  "useCallback snippet": {
+    "prefix": "usec",
+    "body": [
+      "useCallback(() => {",
+      "  "
+      , "}, []);"
+    ],
+    "description": "[React] useCallback"
+  },
+
+  "useMemo snippet": {
+    "prefix": "usem",
+    "body": [
+      "const $1 = useMemo(() => ",
+      "  $2,",
+      "[]);"
+    ],
+    "description": "[React] useMemo"
   },
 
   "interface component props": {
@@ -37,7 +57,7 @@
     ],
     "description": "[React] Interface"
   },
-  
+
   // ===================== React Native =====================
   "reactNativeFunctionalExport": {
     "prefix": "rnfe",
@@ -87,5 +107,21 @@
       "export default ${TM_FILENAME_BASE};"
     ],
     "description": "[RN] Component with children"
+  },
+
+  // ===================== Typescript General =====================
+  "export default snippet": {
+    "prefix": "edd",
+    "body": [
+      "export default $TM_FILENAME_BASE;"
+    ],
+    "description": "Export default file"
+  },
+  "log": {
+    "prefix": "c",
+    "body": [
+      "console.log($1);"
+    ],
+    "description": "consolelog"
   }
 }

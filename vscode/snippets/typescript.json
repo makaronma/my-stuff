@@ -1,10 +1,127 @@
 {
+  // ===================== React General =====================
+  "useEffect log": {
+    "prefix": "uselog",
+    "body": [
+      "useEffect(() => {",
+      "  console.log($1);",
+      "}, [$1]);"
+    ],
+    "description": "[React] consolelog by useEffect"
+  },
+
+  "useState snippet": {
+    "prefix": "uses",
+    "body": [
+      "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState<$2>($3);"
+    ],
+    "description": "[React] useState"
+  },
+
+  "useEffect snippet": {
+    "prefix": "usee",
+    "body": [
+      "useEffect(() => {",
+       "", 
+       "}, []);"
+    ],
+    "description": "[React] useEffect"
+  },
+
+  "useCallback snippet": {
+    "prefix": "usec",
+    "body": [
+      "useCallback(() => {",
+      "  "
+      , "}, []);"
+    ],
+    "description": "[React] useCallback"
+  },
+
+  "useMemo snippet": {
+    "prefix": "usem",
+    "body": [
+      "const $1 = useMemo(() => ",
+      "  $2,",
+      "[]);"
+    ],
+    "description": "[React] useMemo"
+  },
+
+  "interface component props": {
+    "prefix": "ii",
+    "body": [
+      "interface ${TM_FILENAME_BASE}Props {",
+      "",
+      "}"
+    ],
+    "description": "[React] Interface"
+  },
+
+  // ===================== React Native =====================
+  "reactNativeFunctionalExport": {
+    "prefix": "rnfe",
+    "body": [
+      "import { View } from 'react-native'",
+      "import React from 'react'",
+      "",
+      "interface ${TM_FILENAME_BASE}Props {",
+      "",
+      "}",
+      "",
+      "const ${TM_FILENAME_BASE}: React.FC<${TM_FILENAME_BASE}Props> = (props) => {",
+      "  const {  } = props;",
+      "$1",
+      "  return (",
+      "    <View>",
+      "      <Text>${TM_FILENAME_BASE}</Text>",
+      "    </View>",
+      "  )",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "[RN] Component"
+  },
+
+  "reactNativeFunctionalExportComponentWrapper": {
+    "prefix": "rnfw",
+    "body": [
+      "import { View } from 'react-native'",
+      "import React, { PropsWithChildren } from 'react'",
+      "",
+      "interface ${TM_FILENAME_BASE}Props {",
+      "",
+      "}",
+      "",
+      "const ${TM_FILENAME_BASE}: React.FC<PropsWithChildren<${TM_FILENAME_BASE}Props>> = (props) => {",
+      "  const { children } = props;",
+      "$1",
+      "  return (",
+      "    <View>",
+      "      {children}",
+      "    </View>",
+      "  )",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "[RN] Component with children"
+  },
+
   // ===================== Typescript General =====================
   "export default snippet": {
     "prefix": "edd",
     "body": [
-      "export default $TM_FILENAME_BASE;" //
+      "export default $TM_FILENAME_BASE;"
     ],
     "description": "Export default file"
+  },
+  "log": {
+    "prefix": "c",
+    "body": [
+      "console.log($1);"
+    ],
+    "description": "consolelog"
   }
 }
