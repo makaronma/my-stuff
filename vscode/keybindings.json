@@ -1,9 +1,28 @@
 [
+  // ===================== Editor =====================
+  // Navigate to variable/function's definition
   {
     "key": "cmd+u",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
+  // Search for variable/function
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+l",
+    "command": "editor.action.openLink"
+  },
+  // Vscode's built-in color picker
+  {
+    "key": "cmd+k cmd+c",
+    "command": "editor.action.showOrFocusStandaloneColorPicker"
+  },
+
+  // ===================== Workbench =====================
+  // ===================== Workbench - Toggle Terminal/Panel =====================
   {
     "key": "cmd+j",
     "command": "workbench.action.terminal.toggleTerminal",
@@ -12,6 +31,34 @@
   {
     "key": "cmd+k cmd+j",
     "command": "workbench.action.togglePanel"
+  },
+  
+  // ===================== Workbench - Open Link =====================
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.terminal.openDetectedLink",
+    "when": "terminalFocus && terminalHasBeenCreated"
+  },
+  // ===================== Workbench - Open File / Folder =====================
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.files.openFile",
+    "when": "false"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.files.openFolderViaWorkspace",
+    "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.files.openFileFolder",
+    "when": "isMacNative && openFolderWorkspaceSupport"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.files.openLocalFileFolder",
+    "when": "remoteFileDialogVisible"
   },
 
   // ===================== Remove Shortcuts =====================
@@ -38,5 +85,53 @@
   {
     "key": "cmd+j",
     "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "cmd+u",
+    "command": "-cursorUndo",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "-workbench.action.terminal.openDetectedLink",
+    "when": "terminalFocus && terminalHasBeenCreated"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFile",
+    "when": "false"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFolderViaWorkspace",
+    "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFileFolder",
+    "when": "isMacNative && openFolderWorkspaceSupport"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openLocalFileFolder",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "-workbench.action.gotoSymbol"
+  },
+  {
+    "key": "cmd+t",
+    "command": "-workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+k cmd+c",
+    "command": "-editor.action.addCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]
