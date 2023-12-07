@@ -1,28 +1,21 @@
 [
   // ===================== Editor =====================
-  // Navigate to variable/function's definition
   {
     "key": "cmd+u",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
-  // Search for variable/function
-  {
-    "key": "cmd+o",
-    "command": "workbench.action.showAllSymbols"
-  },
   {
     "key": "cmd+l",
     "command": "editor.action.openLink"
   },
-  // Vscode's built-in color picker
   {
     "key": "cmd+k cmd+c",
     "command": "editor.action.showOrFocusStandaloneColorPicker"
   },
 
   // ===================== Workbench =====================
-  // ===================== Workbench - Toggle Terminal/Panel =====================
+  // ===================== Workbench - Panel =====================
   {
     "key": "cmd+j",
     "command": "workbench.action.terminal.toggleTerminal",
@@ -33,7 +26,7 @@
     "command": "workbench.action.togglePanel"
   },
   
-  // ===================== Workbench - Open Link =====================
+  // ===================== Workbench - Link =====================
   {
     "key": "cmd+o",
     "command": "workbench.action.terminal.openDetectedLink",
@@ -60,6 +53,11 @@
     "command": "workbench.action.files.openLocalFileFolder",
     "when": "remoteFileDialogVisible"
   },
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.showAllSymbols"
+  },
+
 
   // ===================== Remove Shortcuts =====================
   {
@@ -133,5 +131,48 @@
     "key": "cmd+k cmd+c",
     "command": "-editor.action.addCommentLine",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "-rerunSearchEditorSearch",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "-workbench.view.extension.thunder-client"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "notebook.execute"
+  },
+  {
+    "key": "cmd+y",
+    "command": "github.copilot.terminal.suggestCommand",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-github.copilot.terminal.suggestCommand",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+r",
+    "command": "jupyter.runcurrentcell",
+    "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !jupyter.havenativecells && !notebookEditorFocused"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-jupyter.runcurrentcell",
+    "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !jupyter.havenativecells && !notebookEditorFocused"
+  },
+  {
+    "key": "cmd+r",
+    "command": "notebook.cell.execute",
+    "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-notebook.cell.execute",
+    "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
   }
 ]
