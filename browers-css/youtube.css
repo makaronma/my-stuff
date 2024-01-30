@@ -1,0 +1,13 @@
+/* Remove Shorts */
+
+#contents.ytd-rich-shelf-renderer ytd-rich-item-renderer.ytd-rich-shelf-renderer {
+    display: none;
+}
+
+#rich-shelf-header {
+    display: none !important;
+}
+
+.button-container.style-scope.ytd-rich-shelf-renderer {
+    display: none;
+}
