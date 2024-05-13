@@ -2,45 +2,45 @@
   // ===================== VSCode =====================
   "explorer.sortOrder": "type",
   "update.mode": "start",
-  "redhat.telemetry.enabled": false,
-  "diffEditor.diffAlgorithm": "advanced",
   "workbench.colorTheme": "Solarized Light+",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.layoutControl.enabled": false,
-  "workbench.tree.indent": 9, // default 8
-
-  "editor.minimap.enabled": false,
-  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
-  "editor.guides.bracketPairs": "active",
-  "window.commandCenter": false,
-  "highlight.regexes": {
-    "(use\\w+(\\(|<))": {
-      "decorations": [
+  "editor.tokenColorCustomizations": {
+    "[Solarized Light+]": {
+      "textMateRules": [
         {
-          "backgroundColor": "#f1e7b5",
-          "color": "#0E1318"
-        }
-      ]
-    },
-    "(console.log)": {
-      "decorations": [
-        {
-          "borderWidth": "2px",
-          "borderColor": "#e4bf1b",
-          "borderStyle": "solid"
-        }
-      ]
-    },
-    "(ignore)": {
-      "decorations": [
-        {
-          "borderWidth": "2px",
-          "borderColor": "#e4bf1b",
-          "borderStyle": "solid"
+          "scope": "meta.function-call.generic.python",
+          "settings": {
+            "fontStyle": "bold"
+          }
         }
       ]
     }
   },
+  "editor.semanticTokenColorCustomizations": {
+    "[Solarized Light+]": {
+      "rules": {
+        "class": "#ff0000",
+        "function": "#ff0000"
+      }
+    }
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.stickyScrollMaxItemCount": 10,
+  "redhat.telemetry.enabled": false,
+  "editor.minimap.enabled": false,
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+  "editor.guides.bracketPairs": "active",
+  "diffEditor.diffAlgorithm": "advanced",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.advanced": {},
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "nxConsole.showNodeVersionOnStartup": false,
+  
   "material-icon-theme.files.associations": {
     "*.go": "go_gopher",
     "*.md": "../../icons/file_type_markdown"
@@ -146,7 +146,6 @@
     "ui.semanticTokens": true
   },
 
-
   // ===================== Languages - JSON =====================
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -171,43 +170,95 @@
   // "omnisharp.monoPath": "/opt/homebrew/bin",
   "omnisharp.useGlobalMono": "always",
   "omnisharp.monoPath": "/Library/Frameworks/Mono.framework/Versions/Current",
-  // ===================== Other =====================
+  "window.commandCenter": false,
 
-  "python.analysis.typeCheckingMode": "strict",
-  "notebook.cellFocusIndicator": "border",
-  "notebook.cellToolbarVisibility": "hover",
+  // ===================== Languages - CSS =====================
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
-  "notebook.output.textLineLimit": 20,
-  "github.copilot.editor.enableAutoCompletions": true,
-  "github.copilot.advanced": {},
-  "nxConsole.showNodeVersionOnStartup": false,
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
-
-
 
   // ===================== Languages - Python =====================
   "[python]": {
     "editor.tabSize": 4,
-    "editor.wordBasedSuggestions": false,
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.wordBasedSuggestions": "off",
+    // "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnType": false,
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
   },
+
+  "notebook.formatOnSave.enabled": true,
+  "notebook.codeActionsOnSave": {
+    "notebook.source.organizeImports": "explicit"
+  },
+  "notebook.cellFocusIndicator": "border",
+  "notebook.cellToolbarVisibility": "hover",
+  "notebook.output.textLineLimit": 20,
+
+  "python.analysis.typeCheckingMode": "strict",
+
+  "vscode-pydata-viewer.pythonPath": "/Users/kahungma/miniconda3/bin/python3",
   "python.analysis.diagnosticSeverityOverrides": {
-    "reportUnusedImport": "warning",
-    "reportUnusedVariable": "warning",
-    "reportUnusedFunction": "warning",
+    "reportUnusedImport": "information",
+    "reportUnusedVariable": "information",
+    "reportUnusedFunction": "information",
     "reportMissingTypeStubs": "information",
     "reportUnknownMemberType": "warning",
     "reportUnknownVariableType": "warning",
-    "reportUnknownParameterType": "warning"
+    "reportUnknownParameterType": "warning",
+    "reportMissingModuleSource": "error"
   },
-  "python.languageServer": "Pylance"
+  "python.languageServer": "Pylance",
+  "python.defaultInterpreterPath": "/Users/kahungma/miniconda3/bin/python",
+  "black-formatter.args": ["--line-length", "130"],
+  "python.analysis.extraPaths": [
+    // "vendor/django-allauth",
+    // "vendor/dj-rest-auth",
+  ],
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "window.zoomLevel": 1,
+  "scm.defaultViewMode": "tree",
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // ===================== Other =====================
+  "highlight.regexes": {
+    "(use\\w+(\\(|<))": {
+      "decorations": [
+        {
+          "backgroundColor": "#f1e7b5",
+          "color": "#0E1318"
+        }
+      ]
+    },
+    "(console.log)": {
+      "decorations": [
+        {
+          "borderWidth": "2px",
+          "borderColor": "#e4bf1b",
+          "borderStyle": "solid"
+        }
+      ]
+    },
+    "(ignore)": {
+      "decorations": [
+        {
+          "borderWidth": "2px",
+          "borderColor": "#e4bf1b",
+          "borderStyle": "solid"
+        }
+      ]
+    },
+    "(Note:)": {
+      "decorations": [
+        {
+          "backgroundColor": "#f5d446"
+        }
+      ]
+    }
+  },
 }
