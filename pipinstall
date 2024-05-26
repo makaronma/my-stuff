@@ -1,0 +1,1 @@
+pip install transformer torch torchvision ipywidgets widgetsnbextension pandas-profiling pillow
