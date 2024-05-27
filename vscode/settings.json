@@ -30,6 +30,7 @@
   "editor.minimap.enabled": false,
   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
   "editor.guides.bracketPairs": "active",
+  "editor.snippetSuggestions": "top",
   "diffEditor.diffAlgorithm": "advanced",
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.advanced": {},
@@ -40,7 +41,7 @@
     "scminput": false
   },
   "nxConsole.showNodeVersionOnStartup": false,
-  
+
   "material-icon-theme.files.associations": {
     "*.go": "go_gopher",
     "*.md": "../../icons/file_type_markdown"
@@ -87,7 +88,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescriptHero.imports.stringQuoteStyle": "\"",
   "typescriptHero.imports.multiLineWrapThreshold": 300,
-  "xstate.nestTypegenFiles": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
 
   // ===================== Languages - Rust =====================
   "[rust]": {
@@ -261,4 +262,11 @@
       ]
     }
   },
+  "githubPullRequests.createOnPublishBranch": "never",
+  "scm.showOutgoingChanges": "never",
+  "workbench.layoutControl.enabled": false,
+  "liveshare.accessibility.soundsEnabled": false,
+  "liveshare.accessibility.voiceEnabled": false,
+  "liveshare.comments": false,
+  "security.workspace.trust.banner": "always"
 }
